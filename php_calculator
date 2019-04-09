@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<form action="info.php" method="get">
+input1:<input type="number" name="input1">
+<br/>
+input2:<input type="number" name="input2">
+<br/>
+operation:
+ <select name="operation">
+  <option value="add">add</option>
+  <option value="substract">substract</option>
+  <option value="multiply">multiply</option>
+  <option value="divison">division</option>
+ 
+</select> 
+<br/>
+<input type="submit">
+<br/>
+answer:<?php 
+$operation =$_GET["operation"];
+$input1 =$_GET["input1"];
+$input2 =$_GET["input2"];
+
+if ($operation == "add") {
+    echo $input1+$input2;
+}
+elseif ($operation == "substract") {
+    echo $input1-$input2;
+}
+elseif ($operation == "multiply") {
+    echo $input1*$input2;
+}
+elseif($operation == "divison") {
+    echo $input1/$input2;
+}
+?>
+</form>
+</body>
+</html>
